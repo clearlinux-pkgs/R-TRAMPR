@@ -4,7 +4,7 @@
 #
 Name     : R-TRAMPR
 Version  : 1.0.9
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/TRAMPR_1.0-9.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/TRAMPR_1.0-9.tar.gz
 Summary  : 'TRFLP' Analysis and Matching Package for R
@@ -13,30 +13,33 @@ License  : GPL-2.0
 BuildRequires : buildreq-R
 
 %description
-# TRAMPR
-<!-- badges: start -->
-[![Project Status: Unsupported – The project has reached a stable, usable state but the author(s) have ceased all work on it. A new maintainer may be desired.](https://www.repostatus.org/badges/latest/unsupported.svg)](https://www.repostatus.org/#unsupported)
-[![Travis build status](https://travis-ci.org/richfitz/TRAMPR.svg?branch=master)](https://travis-ci.org/richfitz/TRAMPR)
-[![](https://www.r-pkg.org/badges/version/TRAMPR)](https://cran.r-project.org/package=TRAMPR)
-<!-- badges: end -->
+polymorphism ('TRFLP') profiles between unknown samples and a
+        database of known samples.  'TRAMPR' facilitates analysis of
+        many unknown profiles at once, and provides tools for working
+        directly with electrophoresis output through to generating
+        summaries suitable for community analyses with R's rich set of
+        statistical functions.  'TRAMPR' also resolves the issues of
+        multiple 'TRFLP' profiles within a species, and shared 'TRFLP'
+        profiles across species.
 
 %prep
 %setup -q -c -n TRAMPR
+cd %{_builddir}/TRAMPR
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583170063
+export SOURCE_DATE_EPOCH=1589518944
 
 %install
-export SOURCE_DATE_EPOCH=1583170063
+export SOURCE_DATE_EPOCH=1589518944
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
