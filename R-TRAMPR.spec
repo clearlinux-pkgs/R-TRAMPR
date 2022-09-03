@@ -4,7 +4,7 @@
 #
 Name     : R-TRAMPR
 Version  : 1.0.10
-Release  : 42
+Release  : 43
 URL      : https://cran.r-project.org/src/contrib/TRAMPR_1.0-10.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/TRAMPR_1.0-10.tar.gz
 Summary  : 'TRFLP' Analysis and Matching Package for R
